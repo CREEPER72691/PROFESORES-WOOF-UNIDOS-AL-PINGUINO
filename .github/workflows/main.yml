@@ -1,0 +1,22 @@
+device: billie
+name: OnePlus Nord N10 5G
+architecture: arm64
+halium_base: 10
+ubuntu_touch_base: focal # Ubuntu Touch actual se basa en Ubuntu 20.04 (Focal Fossa)
+chipset: Snapdragon 690 (SM6350)
+
+repositories:
+  device_tree:
+    repo: https://github.com
+    branch: lineage-17.1
+    path: device/oneplus/billie
+  kernel:
+    repo: https://github.com
+    branch: lineage-17.1
+    path: kernel/oneplus/sm6350
+  vendor:
+    repo: https://github.com
+    branch: lineage-17.1
+    path: vendor/oneplus
+concurrency:
+  
