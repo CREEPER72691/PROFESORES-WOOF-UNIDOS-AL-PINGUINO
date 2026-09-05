@@ -1,0 +1,19 @@
+device: "billie"
+name: "OnePlus Nord N10 5G"
+halium_base: "11"
+device_tree:
+  repo: "https://github.com/LineageOS/android_device_oneplus_billie"
+  branch: "lineage-18.1"
+  path: "device/oneplus/billie"
+kernel:
+  repo: "https://github.com/LineageOS/android_kernel_oneplus_sm6350"
+  branch: "lineage-18.1"
+  path: "kernel/oneplus/sm6350"
+vendor:
+  repo: "https://github.com/TheMuppets/proprietary_vendor_oneplus"
+  branch: "lineage-18.1"
+  path: "vendor/oneplus"
+chipset: "Snapdragon 690"
+soc: "SM6350"
+droidian_base: "bookworm"
+architecture: "arm64"
