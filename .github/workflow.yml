@@ -1,0 +1,47 @@
+# billie.yaml - Configuración de adaptación de Halium para OnePlus Nord N10 5G
+device: billie
+arch: arm64
+android_version: "10.0"
+halium_version: "10.0"
+
+# Repositorios del código fuente de Android y Halium
+repositories:
+  - name: halium
+    url: https://github.com
+    revision: halium-10.0
+    
+  - name: device_oneplus_billie
+    url: https://github.com
+    path: device/oneplus/billie
+    revision: halium-10.0
+
+  - name: kernel_oneplus_sm6350
+    url: https://github.com
+    path: kernel/oneplus/sm6350
+    revision: halium-10.0
+
+  - name: vendor_oneplus_billie
+    url: https://github.com
+    path: vendor/oneplus/billie
+    revision: halium-10.0
+
+  - name: device_halium_generic
+    url: https://github.com_device_halium_halium_arm64
+    path: device/halium/halium_arm64
+    revision: halium-10.0
+
+# Configuración del entorno de compilación (Build)
+build:
+  target: halium_billie-userdebug
+  tasks:
+    - hybris-boot
+    - systemimage
+
+# Opciones específicas de Droidian / Hybris
+adaptation:
+  type: hybris
+  features:
+    - binder
+    - ashmem
+    - bluetooth
+    - wifi
